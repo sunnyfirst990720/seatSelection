@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dingzhen.dao.ClassesDao">
+	
+	<select id="findClasses" parameterType="classes" resultType="classes">
+		select a.id,concat(c.name,a.name) as name,a.specialty_id as specialtyId,c.name as specialtyName,a.institute_id as instituteId,d.name as instituteName,teacherno,b.name as teachername,grade,count  
+		from classes a left join teacher b on a.teacherno = b.no left join specialty c on a.specialty_id = c.id left join institute d on c.instituteId = d.id where 1=1
+		<if test="instituteId != null and '' != instituteId">  
+            <![CDATA[  
+              AND a.institute_id = #{instituteId} 
+            ]]>  
+        </if>
+        <if test="specialtyId !=null and specialtyId!=-1">  
+            <![CDATA[  
+              AND a.specialty_id = #{specialtyId}   
+            ]]>  
+        </if>
+		<if test="page != null and rows != null" >           
+              limit #{page}, #{rows} 
+        </if>
+	</select>
+
+	<select id="findInstitute" resultType="classes">
+		select id as instituteId,name as instituteName
+		from institute
+	</select>
+	
+	<select id="findSpecialty" parameterType="Integer" resultType="classes">
+		select id as specialtyId,name as specialtyName
+		from specialty
+		<where>instituteId=#{id}</where>
+	</select>
+	
+	<select id="countClasses" parameterType="classes" resultType="int">
+		select count(*)  
+		from classes a left join teacher b on a.teacherno = b.no left join specialty c on a.specialty_id = c.id left join institute d on c.instituteId = d.id where 1=1
+		<if test="instituteId != null and '' != instituteId">  
+            <![CDATA[  
+              AND a.institute_id = #{instituteId} 
+            ]]>  
+        </if>
+        <if test="specialtyId !=null and specialtyId!=-1">  
+            <![CDATA[  
+              AND a.specialty_id = #{specialtyId}   
+            ]]>  
+        </if>
+	</select>
+	
+	<insert id="addClasses" parameterType="classes" >
+		insert classes(institute_id,specialty_id,name,grade,teacherno,count) 
+		values (#{instituteId},#{specialtyId},#{name},#{grade},#{teacherno},#{count})
+	</insert>
+	
+	<update id="updateClasses" parameterType="classes">
+    	update classes set
+    	<trim suffixOverrides=",">
+			<if test="name!=null">name=#{name},</if>
+			<if test="xueyuan!=null">xueyuan=#{xueyuan},</if>
+			<if test="zhuanye!=null">zhuanye=#{zhuanye},</if>
+			<if test="teacherno!=null">teacherno=#{teacherno},</if>
+		</trim>
+		<where>id=#{id}</where>
+    </update>
+	
+	
+	<delete id="deleteClasses" parameterType="Integer">
+		delete from classes <where>id=#{id}</where>
+	</delete>
+	
+
+	
+	
+	
+</mapper>

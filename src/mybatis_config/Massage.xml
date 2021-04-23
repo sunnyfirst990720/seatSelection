@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dingzhen.dao.MassageDao">
+	
+	<select id="findMassage" parameterType="massage" resultType="massage">
+		select * from massage where 1 =1 
+		<if test="status != null and '' != status">  
+            <![CDATA[  
+             AND  status = #{status}   
+            ]]>  
+        </if>
+        <if test="name != null and '' != name">  
+            <![CDATA[  
+              AND name like '%' #{name} '%'  
+            ]]>  
+        </if>
+        <if test="phone!=null and ''!=phone">  
+            <![CDATA[  
+              AND phone like '%' #{phone} '%'  
+            ]]>  
+        </if>
+		<if test="page != null and rows != null" >           
+              limit #{page}, #{rows} 
+        </if>
+	</select>
+
+
+	<select id="countMassage" parameterType="massage" resultType="int">
+		select 
+			count(*)
+		from massage
+	</select>
+	
+	<insert id="addMassage" parameterType="massage" >
+		insert massage(name,email,phone,content,status) 
+		values (#{name},#{email},#{phone},#{content},1)
+	</insert>
+	
+	<update id="updateMassage" parameterType="massage">
+    	update massage set
+    	<trim suffixOverrides=",">
+			<if test="status!=null">status=#{status},</if>
+		</trim>
+		<where>id=#{id}</where>
+    </update>
+	
+	
+	<delete id="deleteMassage" parameterType="Integer">
+		delete from status <where>id=#{id}</where>
+	</delete>
+	
+</mapper>
