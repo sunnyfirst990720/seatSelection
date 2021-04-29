@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>阅览室列表</title>
+	<title>自习室列表</title>
 	<link rel="stylesheet" href="${path }/layui/css/layui.css" media="all">
 	<script type="text/javascript" src="${path }/layui/layui.js" charset="utf-8"></script>
     <style>
@@ -42,7 +42,7 @@
 			  <div class="layui-form-item" id="roomIdhide">
 			    <label class="layui-form-label">名称</label>
 			    <div class="layui-input-block">
-			      <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入阅览室名称" class="layui-input">
+			      <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入自习室名称" class="layui-input">
 			    </div>
 			  </div>
 			  
@@ -50,7 +50,7 @@
 			  	<label class="layui-form-label">类型</label>
 			  	<div class="layui-input-block">
 			  		<select id="typeSel" name="str" lay-verify="required" lay-filter="instituteSel">
-						<option value="">--请选择阅览室类型--</option>
+						<option value="">--请选自习室类型--</option>
 					</select>
 			  	</div>
 			  </div>
@@ -72,14 +72,14 @@
 			  <div class="layui-form-item">
 			    <label class="layui-form-label">行数</label>
 			    <div class="layui-input-block">
-			      <input type="number" name="row" lay-verify="number" autocomplete="off" placeholder="请设置阅览室行数" class="layui-input">
+			      <input type="number" name="row" lay-verify="number" autocomplete="off" placeholder="请设置自习室行数" class="layui-input">
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
 			    <label class="layui-form-label">列数</label>
 			    <div class="layui-input-block">
-			      <input type="number" name="col" lay-verify="number" autocomplete="off" placeholder="请设置阅览室列数" class="layui-input">
+			      <input type="number" name="col" lay-verify="number" autocomplete="off" placeholder="请设置自习室列数" class="layui-input">
 			    </div>
 			  </div>
 			  
@@ -102,7 +102,7 @@
 	<script type="text/html" id="toolbarDemo">
 	<div class="layui-form-item">
   		<div class="layui-btn-group layui-inline">
-    		<button class="layui-btn layui-btn-sm" lay-event="add" title="添加"><i class="layui-icon"></i>添加阅览室</button>
+    		<button class="layui-btn layui-btn-sm" lay-event="add" title="添加"><i class="layui-icon"></i>添加自习室</button>
     		<button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="delete" title="批量删除"><i class="layui-icon"></i>批量删除</button>
   		</div>
 	</div>
@@ -156,7 +156,7 @@
     				success : function(d) {
     					console.log(d);
     					var list=d;
-    					 var tmp = '<option value="">--请选择阅览室类型--</option>';
+    					 var tmp = '<option value="">--请选择自习室类型--</option>';
     					 for ( var i in list) {
     						 tmp += '<option value="' + list[i].id +","+ list[i].name + '">' + list[i].name + '</option>';
     					}
@@ -179,7 +179,7 @@
                     document.getElementById("roomForm").reset(); //清空表单数据
                     layer.open({ //显示表单
 	                    type: 1,
-	                    title: "添加阅览室",
+	                    title: "添加自习室",
 	                    area: ['600px', '420px'],
 	                    content: $('#popUpdateTest')//引用的弹出层的页面层的方式加载修改界面表单
 	                });
@@ -246,7 +246,7 @@
             else if(layEvent === 'edit') {
                 layer.open({
                     type: 1,
-                    title: "修改阅览室信息",
+                    title: "修改自习室信息",
                     area: ['600px', '420px'],
                     content: $('#popUpdateTest')
                 });

@@ -25,7 +25,7 @@ option = {
         trigger: 'axis'
     },
     legend: {
-        data:['1号阅览室','2号阅览室','3号阅览室','4号阅览室']
+        data:['1号自习室','2号自习室','3号自习室','4号自习室']
     },
     toolbox: {
         show : true,
@@ -50,7 +50,7 @@ option = {
     ],
     series : [
         {
-            name:'1号阅览室',
+            name:'1号自习室',
             type:'bar',
             //data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
             markPoint : {
@@ -66,7 +66,7 @@ option = {
             }
         },
         {
-            name:'2号阅览室',
+            name:'2号自习室',
             type:'bar',
             markPoint : {
                 data : [
@@ -81,7 +81,7 @@ option = {
             }
         },
         {
-            name:'3号阅览室',
+            name:'3号自习室',
             type:'bar',
             markPoint : {
                 data : [
@@ -96,7 +96,7 @@ option = {
             }
         },
         {
-            name:'4号阅览室',
+            name:'4号自习室',
             type:'bar',
             markPoint : {
                 data : [

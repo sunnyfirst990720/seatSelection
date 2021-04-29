@@ -36,7 +36,7 @@
 		<nav class="navbar navbar-default">
 			<div class="container" style="width: 72%;">
 				<div class="navbar-header navbar-left wthree">
-					<h1><a href="${path }/link/index.htm">Library<span>Seat Reservation</span></a></h1>
+					<h1><a href="${path }/link/index.htm">StudyRoom<span>Seat Reservation</span></a></h1>
 				</div>
 				
 				<div class="header-right wthree">
@@ -61,8 +61,8 @@
 									<%-- <li><a href="${path }/link/myRecommend.htm">我的推荐</a></li> --%>
 								</ul>
 							</li> 
-							<li><a href="${path }/link/recommend.htm">读者推荐</a></li>
-							<li><a href="${path }/link/contact.htm">联系我们</a></li>			
+							<li><a href="${path }/link/recommend.htm">聊天墙</a></li>
+							<li><a href="${path }/link/contact.htm">问题反馈</a></li>
 						</ul>
 						<a id="updataImg" style="cursor:pointer"><img id="headPortrait" alt="image" class="img-circle" src="${currentUser.headPortrait }" height="100" width="100" style="margin-top: 10px;"/></a>
 						<!-- <button id="loginButton" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" onclick="login()" style="margin-top: 8px;margin-left: 20px;">用户登录</button> -->
@@ -147,12 +147,12 @@
 				    
 				    <tbody>
 				      <tr>
-				        <td>一号阅览室（201）</td>
+				        <td>一号自习室（201）</td>
 				        <td>8:00-22:00</td>
 				        <td>周一至周日</td>
 				      </tr>
 				      <tr>
-				        <td>二号阅览室（202）</td>
+				        <td>二号自习室（202）</td>
 				        <td>5月1日-10月31日 上午8：00-12：00
 
 							<br>下午14：30-22：00
@@ -163,7 +163,7 @@
 				        <td>周一至周日</td>
 				      </tr>
 				      <tr>
-				        <td>三号阅览室
+				        <td>三号自习室
 
 							<br>（西区203）</td>
 				        <td>5月1日-10月31日 上午8：00-12：00
@@ -183,7 +183,7 @@
 				        <td>周一至周日</td>
 				      </tr>
 				      <tr>
-				        <td>四号阅览室（301）</td>
+				        <td>四号自习室（301）</td>
 				        <td>5月1日-10月31日 上午8：00-12：00
 
 							<br>下午14：30-22：00
@@ -247,7 +247,7 @@
 			<br>
 			<br>说明：
 			<br>
-			<br>1、各阅览室在关闭前需10-15分钟整理时间。
+			<br>1、各自习室在关闭前需10-15分钟整理时间。
 			<br>2、开放时间内遇有临时停电时安排规则参见临时停电闭馆规定。
 			<br>3、寒暑假、法定公众假日开放的安排规则参见图书馆放假工作安排。
 			<br>4、寒暑假、法定公众假日及其它非正常情况下具体开放时间请留意图书馆开闭馆最新通知。

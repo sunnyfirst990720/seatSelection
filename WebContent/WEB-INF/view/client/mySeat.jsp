@@ -36,7 +36,7 @@
 		<nav class="navbar navbar-default">
 			<div class="container" style="width: 72%;">
 				<div class="navbar-header navbar-left wthree">
-					<h1><a href="${path }/link/index.htm">Library<span>Seat Reservation</span></a></h1>
+					<h1><a href="${path }/link/index.htm">StudyRoom<span>Seat Reservation</span></a></h1>
 				</div>
 				
 				<div class="header-right wthree">
@@ -61,8 +61,8 @@
 									<%-- <li><a href="${path }/link/myRecommend.htm">我的推荐</a></li> --%>
 								</ul>
 							</li> 
-							<li><a href="${path }/link/recommend.htm">读者推荐</a></li>
-							<li><a href="${path }/link/contact.htm">联系我们</a></li>			
+							<li><a href="${path }/link/recommend.htm">聊天墙</a></li>
+							<li><a href="${path }/link/contact.htm">问题反馈</a></li>
 						</ul>
 						<a id="updataImg" style="cursor:pointer"><img id="headPortrait" alt="image" class="img-circle" src="${currentUser.headPortrait }" height="100" width="100" style="margin-top: 10px;"/></a>
 						<!-- <button id="loginButton" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" onclick="login()" style="margin-top: 8px;margin-left: 20px;">用户登录</button> -->
@@ -202,8 +202,8 @@
                 [ 
                 	{ field: 'number', title: '序号',width:60,fixed:'left',type:'numbers'},
                     { field: 'id', title: '座位id', sort: true, hide:true },
-                    { field: 'roomid', title: '阅览室id',hide:true },
-                    { field: 'roomname', title: '阅览室', sort: true,width:128}, 
+                    { field: 'roomid', title: '自习室id',hide:true },
+                    { field: 'roomname', title: '自习室', sort: true,width:128},
                     { field: 'date', title: '日期' },
                     { field: 'time', title: '时间段' },
                     { field: 'studentno', title: '学号',hide:true}, 

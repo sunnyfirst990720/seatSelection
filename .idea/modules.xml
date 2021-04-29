@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LibrarySeatSystem.iml" filepath="$PROJECT_DIR$/LibrarySeatSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibrarySeatsSystem.iml" filepath="$PROJECT_DIR$/LibrarySeatsSystem.iml" />
     </modules>
   </component>
 </project>

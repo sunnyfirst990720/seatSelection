@@ -1,7 +1,10 @@
+package dingzhen.controller;/*
 package dingzhen.controller;
+*/
 /*
  * 交流控制器
  */
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -139,3 +142,4 @@ public class BbsController {
 	
 	
 }
+

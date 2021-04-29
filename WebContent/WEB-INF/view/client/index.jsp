@@ -62,8 +62,8 @@
 									<%-- <li><a href="${path }/link/myRecommend.htm">我的推荐</a></li> --%>
 								</ul>
 							</li> 
-							<li><a href="${path }/link/recommend.htm">读者推荐</a></li>
-							<li><a href="${path }/link/contact.htm">联系我们</a></li>
+							<li><a href="${path }/link/recommend.htm">聊天墙</a></li>
+							<li><a href="${path }/link/contact.htm">问题反馈</a></li>
 
 						</ul>
 						<a id="updataImg" style="cursor:pointer"><img id="headPortrait" alt="image" class="img-circle" src="${currentUser.headPortrait }" height="100" width="100" style="margin-top: 10px;"/></a>
@@ -127,7 +127,7 @@
 	</div>
 	<!-- //通知公告 -->
 	
-	<!-- 阅览室余座 -->
+	<!-- 自习室余座 -->
 	<div class="features">
 		<div class="container">
 			<div class="w3ls-title">
@@ -139,7 +139,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- //阅览室余座 -->
+	<!-- //自习室余座 -->
 	 
 
 	<!-- footer -->
@@ -269,7 +269,7 @@ layui.use(['form','upload','layer'], function(){
   }) 
 });
 </script>
-<!--阅览室余座  -->
+<!--自习室余座  -->
 <script>
     layui.use(['table', 'form', 'layer'], function() {
         var form = layui.form
@@ -308,7 +308,7 @@ layui.use(['form','upload','layer'], function(){
         table.render({
             elem: '#demo',
             height: 'full-40',
-            title: '阅览室余座信息',
+            title: '自习室余座信息',
             page: false, //开启分页
             toolbar: false,
             limits:[10,20,30,40],
@@ -317,7 +317,7 @@ layui.use(['form','upload','layer'], function(){
                 [ 
                     { field: 'date', title: '日期', sort: true },
                     { field: 'time', title: '时间', sort: true }, 
-                    { field: 'roomname', title: '阅览室名称' }, 
+                    { field: 'roomname', title: '自习室名称' },
                     { field: 'page', title: '余座', sort: true }
                 ]
             ],

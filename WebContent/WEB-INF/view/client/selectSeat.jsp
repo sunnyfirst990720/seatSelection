@@ -43,7 +43,7 @@
 		<nav class="navbar navbar-default">
 			<div class="container" style="width: 72%;">
 				<div class="navbar-header navbar-left wthree">
-					<h1><a href="${path }/link/index.htm">Library<span>Seat Reservation</span></a></h1>
+					<h1><a href="${path }/link/index.htm">StudyRoom<span>Seat Reservation</span></a></h1>
 				</div>
 				
 				<div class="header-right wthree">
@@ -68,8 +68,8 @@
 									<%-- <li><a href="${path }/link/myRecommend.htm">我的推荐</a></li> --%>
 								</ul>
 							</li> 
-							<li><a href="${path }/link/recommend.htm">读者推荐</a></li>
-							<li><a href="${path }/link/contact.htm">联系我们</a></li>			
+							<li><a href="${path }/link/recommend.htm">聊天墙</a></li>
+							<li><a href="${path }/link/contact.htm">问题反馈</a></li>
 						</ul>
 						<a id="updataImg" style="cursor:pointer"><img id="headPortrait" alt="image" class="img-circle" src="${currentUser.headPortrait }" height="100" width="100" style="margin-top: 10px;"/></a>
 						<!-- <button id="loginButton" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" onclick="login()" style="margin-top: 8px;margin-left: 20px;">用户登录</button> -->
@@ -114,7 +114,7 @@
 	    </div>
 	    <div class="layui-input-inline">
 	        <select type="text" id="s_room" name="roomid"  autocomplete="off"  lay-verify="required" class="layui-select">
-				<option value="">--请选择阅览室--</option>
+				<option value="">--请选择自习室--</option>
 			</select>
 	    </div>
 	    <div class="layui-inline">
@@ -126,7 +126,7 @@
 	<div id="flash" >
 	<div class="content">
 		<div class="main">
-			<h2>阅览室</h2>
+			<h2>自习室</h2>
 			<div class="demo">
 				<!---左边座位列表----->
 				<div id="seat-map">
@@ -260,7 +260,7 @@
 				}
 			});
 		    
-		    //阅览室下拉框
+		    //自习室下拉框
 		    $.ajax({
 				type : "post",
 				url : "${path }/seat/roomCombo.htm",
@@ -283,7 +283,7 @@
 		    //search 提交操作
 		    form.on('submit(submit)', function(massage) {
 		    	document.getElementById('flash').innerHTML=
-		    		'<div class="content"><div class="main"><h2>'+$('#s_room').val()+'号阅览室</h2><div class="demo"><div id="seat-map"></div><div class="booking-details"><ul class="book-left"><li>Seats</li><li>选择的座位:</li></ul><ul class="book-right"><li>: <span id="counter">0</span></li></ul><div class="clear"></div><ul id="selected-seats" class="scrollbar scrollbar1"></ul><button id="senddata" class="checkout-button" onclick="selectSeat()">确认选座</button><div id="legend"></div></div><div style="clear:both"></div></div></div></div>';
+		    		'<div class="content"><div class="main"><h2>'+$('#s_room').val()+'号自习室</h2><div class="demo"><div id="seat-map"></div><div class="booking-details"><ul class="book-left"><li>Seats</li><li>选择的座位:</li></ul><ul class="book-right"><li>: <span id="counter">0</span></li></ul><div class="clear"></div><ul id="selected-seats" class="scrollbar scrollbar1"></ul><button id="senddata" class="checkout-button" onclick="selectSeat()">确认选座</button><div id="legend"></div></div><div style="clear:both"></div></div></div></div>';
 		  		
 		    	keyword=$('#s_date').val()+'-'+$('#s_time').val()+'-'+$('#s_room').val()+'-';
 		        $.ajax({

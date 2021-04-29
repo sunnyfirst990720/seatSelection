@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>资料列表</title>
+	<title>消息列表</title>
 	<link rel="stylesheet" href="${path }/layui/css/layui.css" media="all">
 	<script type="text/javascript" src="${path }/layui/layui.js" charset="utf-8"></script>
     <style>
@@ -32,43 +32,43 @@
     <div class="layui-row" id="popUpdateTest" style="display:none;">
     	<div class="layui-col-md10">
 			<form id="userForm" class="layui-form" action="" lay-filter="formTest" style="margin-top:20px">
-			  <div class="layui-form-item">
+			 <%-- <div class="layui-form-item">
 			    <label class="layui-form-label">封面图片</label>
 			    <div class="layui-input-block">
 			      <img alt="封面图片" src="" id="img_id" height="300" width="200" align="middle">
 			    </div>
-			  </div>
+			  </div>--%>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">资料名称</label>
+			    <label class="layui-form-label">消息主题</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="name" lay-verify="" autocomplete="off" placeholder="" class="layui-input" readonly>
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">作者</label>
+			    <label class="layui-form-label">日期</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="author" lay-verify="" autocomplete="off" placeholder="" class="layui-input" readonly>
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">出版社</label>
+			    <label class="layui-form-label">地点</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="publish" lay-verify="" autocomplete="off" placeholder="" class="layui-input" readonly>
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">索书号</label>
+			    <label class="layui-form-label">联系方式</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="findnumber" lay-verify="" autocomplete="off" placeholder="" class="layui-input" readonly>
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">简介</label>
+			    <label class="layui-form-label">消息内容</label>
 			    <div class="layui-input-block">
 			      <textarea name="remarks" placeholder="" class="layui-textarea" readonly></textarea>
 			    </div>
@@ -105,13 +105,13 @@
 		
   		<div class="layui-inline">
 			<div class="layui-input-inline">
-    			<input type="text" id="s_name" name="s_name" lay-verify="" placeholder="按书名查询" autocomplete="off" class="layui-input">
+    			<input type="text" id="s_name" name="s_name" lay-verify="" placeholder="按主题查询" autocomplete="off" class="layui-input">
 			</div>
 		</div>
 
 		<div class="layui-inline">
 			<div class="layui-input-inline">
-    			<input type="text" id="s_author" name="s_author" lay-verify="" placeholder="按作者查询" autocomplete="off" class="layui-input">
+    			<input type="text" id="s_author" name="s_author" lay-verify="" placeholder="按日期查询" autocomplete="off" class="layui-input">
 			</div>
 		</div>		
 
@@ -153,11 +153,11 @@
                 [ 
                     { field: 'id', title: '资料id', sort: true, hide:true },
                     { field: 'cover', title: '书籍封面',hide:true },
-                    { field: 'name', title: '资料名称', sort: true }, 
-                    { field: 'author', title: '作者' }, 
-                    { field: 'publish', title: '出版信息', sort: true, hide:true }, 
-                    { field: 'findnumber', title: '索书号' },
-                    { field: 'remarks', title: '简介',hide:true },
+                    { field: 'name', title: '主题', sort: true },
+                    { field: 'author', title: '日期' },
+                    { field: 'publish', title: '地点', sort: true, hide:true },
+                    { field: 'findnumber', title: '联系方式' },
+                    { field: 'remarks', title: '内容',hide:true },
                     { field: 'status', title: '状态', width:128, templet: '#switchTpl'},
                     { fixed: 'right',title: '审核操作', width: 196, align: 'center', toolbar: '#checkDemo' },
                     { fixed: 'right',title: '其他操作', width: 256, align: 'center', toolbar: '#barDemo' }
@@ -200,7 +200,7 @@
             	$("#img_id").attr("src",data.cover);
                 layer.open({
                     type: 1,
-                    title: "资料详情",
+                    title: "消息详情",
                     area: ['720px', '720px'],
                     content: $('#popUpdateTest')
                 });

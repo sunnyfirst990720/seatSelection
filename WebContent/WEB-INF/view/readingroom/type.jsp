@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>阅览室类型</title>
+	<title>自习室类型</title>
 	<link rel="stylesheet" href="${path }/layui/css/layui.css" media="all">
 	<script type="text/javascript" src="${path }/layui/layui.js" charset="utf-8"></script>
     <style>
@@ -89,7 +89,7 @@
         table.render({
             elem: '#demo',
             height: 'full-40',
-            title: '阅览室类型',
+            title: '自习室类型',
             page: true, //开启分页
             toolbar: '#toolbarDemo' ,//开启工具栏，此处显示默认图标，可以自定义模板，详见文档,
             limits:[10,20,30,40],

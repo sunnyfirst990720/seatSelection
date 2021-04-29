@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>阅览室余座信息</title>
+	<title>自习室余座信息</title>
 	<link rel="stylesheet" href="${path }/layui/css/layui.css" media="all">
 	<script type="text/javascript" src="${path }/layui/layui.js" charset="utf-8"></script>
     <style>
@@ -42,7 +42,7 @@
         table.render({
             elem: '#demo',
             height: 'full-40',
-            title: '阅览室余座信息',
+            title: '自习室余座信息',
             page: false, //开启分页
             toolbar: false,
             limits:[10,20,30,40],
@@ -51,7 +51,7 @@
                 [ 
                     { field: 'date', title: '日期', sort: true },
                     { field: 'time', title: '时间', sort: true }, 
-                    { field: 'roomname', title: '阅览室名称' }, 
+                    { field: 'roomname', title: '自习室名称' },
                     { field: 'page', title: '余座', sort: true }
                 ]
             ],

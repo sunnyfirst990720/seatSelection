@@ -89,15 +89,15 @@
                     <li>
                         <a href="#">
                             <i class="fa fa-leanpub"></i>
-                            <span class="nav-label">阅览室管理</span>
+                            <span class="nav-label">自习室管理</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="type/typeIndex.htm">阅览室类型</a>
+                                <a class="J_menuItem" href="type/typeIndex.htm">自习室类型</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="room/roomIndex.htm">阅览室信息</a>
+                                <a class="J_menuItem" href="room/roomIndex.htm">自习室信息</a>
                             </li>
                         </ul>
                     </li>
@@ -134,7 +134,7 @@
                             <li><a class="J_menuItem" href="massage/massageIndex.htm">消息</a></li>                           
                         </ul>
                     </li>
-                    <!-- <li>
+                     <%--<li>
                         <a href="#">
                         	<i class="fa fa-commenting-o"></i> 
                         	<span class="nav-label">交流管理</span>
@@ -143,7 +143,7 @@
                         <ul class="nav nav-second-level">
                             <li><a class="J_menuItem" href="bbs/bbsIndex.htm">帖子管理</a></li>                            
                         </ul>
-                    </li> -->
+                    </li>--%>
                     <li>
                         <a href="#">
                         	<i class="fa fa-line-chart"></i> 
@@ -160,11 +160,11 @@
                     <li>
                         <a href="#">
                         	<i class="fa fa-book"></i> 
-                        	<span class="nav-label">资料推荐</span>
+                        	<span class="nav-label">聊天墙</span>
                         	<span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="book/bookIndex.htm">书籍推荐</a>
+                            <li><a class="J_menuItem" href="book/bookIndex.htm">消息栏</a>
                             </li>
                         </ul>
                     </li>
@@ -197,9 +197,9 @@
                                         </a>
                                         <div class="media-body">
                                             <small class="pull-right">46小时前</small>
-                                            <strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？
+                                            <strong>小四</strong> 新冠防治注意事项
                                             <br>
-                                            <small class="text-muted">3天前 2014.11.8</small>
+                                            <small class="text-muted">3天前 2020.11.8</small>
                                         </div>
                                     </div>
                                 </li>
@@ -298,7 +298,7 @@
                 <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v1.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
         	</div>
             <div class="footer">
-                <div class="pull-right">&copy; 2019 Jiyl's blog
+                <div class="pull-right">&copy; 2021 SunHaoyi's blog
                 </div>
             </div>
         </div>

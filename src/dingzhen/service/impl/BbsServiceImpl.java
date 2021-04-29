@@ -2,14 +2,13 @@ package dingzhen.service.impl;
 
 import java.util.List;
 
+import dingzhen.dao.BbsDao;
+import dingzhen.service.BbsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dingzhen.dao.BbsDao;
-import dingzhen.service.BbsService;
-
 @Service("bbsService")
-public class BbsServiceImpl<T> implements BbsService<T>{
+public class BbsServiceImpl<T> implements BbsService<T> {
 	
 	@Autowired
 	private BbsDao<T> dao;

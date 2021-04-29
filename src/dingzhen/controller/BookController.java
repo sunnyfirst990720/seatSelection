@@ -1,12 +1,13 @@
 package dingzhen.controller;
 
-// 书籍管理控制器
+// 聊天管理控制器
 import java.io.File;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dingzhen.dao.BookDao;
 import net.sf.json.JSONObject;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,8 +42,19 @@ public class BookController {
 			return "tuijian/bookIndex";
 		}
 	}
-	
-	
+	@RequestMapping("bookAdd")
+	public String bookAdd(Book book){
+		try {
+			bookService.addBook(book);
+		}
+		catch (Exception e) {
+				e.printStackTrace();
+			}
+		return null;
+	}
+
+
+
 	@RequestMapping("bookList")
 	public void bookList(HttpServletRequest request,HttpServletResponse response) {
 		try {

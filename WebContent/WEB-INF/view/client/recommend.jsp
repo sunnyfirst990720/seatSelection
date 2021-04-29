@@ -36,7 +36,7 @@
 		<nav class="navbar navbar-default">
 			<div class="container" style="width: 72%;">
 				<div class="navbar-header navbar-left wthree">
-					<h1><a href="${path }/link/index.htm">Library<span>Seat Reservation</span></a></h1>
+					<h1><a href="${path }/link/index.htm">StudyRoom<span>Seat Reservation</span></a></h1>
 				</div>
 				
 				<div class="header-right wthree">
@@ -61,8 +61,8 @@
 									<%-- <li><a href="${path }/link/myRecommend.htm">我的推荐</a></li> --%>
 								</ul>
 							</li> 
-							<li><a href="${path }/link/recommend.htm">读者推荐</a></li>
-							<li><a href="${path }/link/contact.htm">联系我们</a></li>			
+							<li><a href="${path }/link/recommend.htm">聊天墙</a></li>
+							<li><a href="${path }/link/contact.htm">问题反馈</a></li>
 						</ul>
 						<a id="updataImg" style="cursor:pointer"><img id="headPortrait" alt="image" class="img-circle" src="${currentUser.headPortrait }" height="100" width="100" style="margin-top: 10px;"/></a>
 						<!-- <button id="loginButton" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" onclick="login()" style="margin-top: 8px;margin-left: 20px;">用户登录</button> -->
@@ -83,7 +83,7 @@
 	<div class="w3_wthree_agileits_icons main-grid-border">
 		<div class="container">
 			<div class="w3ls-title"> 
-				<h3 class="agileits-title w3title1">热门推荐</h3>
+				<h3 class="agileits-title w3title1">畅所欲言</h3>
 			</div>
 			<div class="about-w3ls-row"> 
 				<table class="layui-hide" id="demo" lay-filter="test"></table>  
@@ -144,18 +144,18 @@
 	<script type="text/html" id="toolbarDemo">
 	<div class="layui-form-item">
 		<div class="layui-btn-group layui-inline">
-    		<button class="layui-btn layui-btn-sm" lay-event="add" title="添加"><i class="layui-icon"></i>推荐书籍</button>
+    		<button class="layui-btn layui-btn-sm" lay-event="add" title="添加"><i class="layui-icon"></i>推送消息</button>
   		</div>		
 
   		<div class="layui-inline">
 			<div class="layui-input-inline">
-    			<input type="text" id="s_name" name="s_name" lay-verify="" placeholder="按书名查询" autocomplete="off" class="layui-input">
+    			<input type="text" id="s_name" name="s_name" lay-verify="" placeholder="按主题查询" autocomplete="off" class="layui-input">
 			</div>
 		</div>
 
 		<div class="layui-inline">
 			<div class="layui-input-inline">
-    			<input type="text" id="s_author" name="s_author" lay-verify="" placeholder="按作者查询" autocomplete="off" class="layui-input">
+    			<input type="text" id="s_author" name="s_author" lay-verify="" placeholder="按日期查询" autocomplete="off" class="layui-input">
 			</div>
 		</div>		
 
@@ -169,43 +169,43 @@
     <div class="layui-row" id="popUpdateTest" style="display:none;">
     	<div class="layui-col-md10">
 			<form id="userForm" class="layui-form" action="" lay-filter="formTest" style="margin-top:20px">
-			  <div class="layui-form-item">
+			<%-- <div class="layui-form-item">
 			    <label class="layui-form-label">图片</label>
 			    <div class="layui-input-block">
 			      <img alt="封面图片" src="" id="img_id" height="200" width="140" align="middle">
 			    </div>
-			  </div>
+			  </div>--%>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">名称</label>
+			    <label class="layui-form-label">主题</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="name" lay-verify="" autocomplete="off" placeholder="" class="layui-input" readonly>
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">作者</label>
+			    <label class="layui-form-label">日期</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="author" lay-verify="" autocomplete="off" placeholder="" class="layui-input" readonly>
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">出版社</label>
+			    <label class="layui-form-label">地点</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="publish" lay-verify="" autocomplete="off" placeholder="" class="layui-input" readonly>
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">索书号</label>
+			    <label class="layui-form-label">联系方式</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="findnumber" lay-verify="" autocomplete="off" placeholder="" class="layui-input" readonly>
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">简介</label>
+			    <label class="layui-form-label">消息内容</label>
 			    <div class="layui-input-block">
 			      <textarea name="remarks" placeholder="" class="layui-textarea" readonly style="height:200px"></textarea>
 			    </div>
@@ -221,10 +221,9 @@
     	<div class="layui-col-md10">
 			<form id="bookForm" class="layui-form" action="" lay-filter="bookform" style="margin-top:20px">
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">图片</label>
 			    <div class="layui-input-block">
 			        <div class="layui-upload">
-					  <button type="button" class="layui-btn" id="test1">上传图片</button>
+
 					  <div class="layui-upload-list">
 					    <img class="layui-upload-img" id="demo1">
 					    <p id="demoText"></p>
@@ -232,44 +231,44 @@
 					</div> 
 			    </div>
 			  </div>
-			  <div class="layui-form-item layui-hide">
+			  <%--<div class="layui-form-item layui-hide">
 			    <label class="layui-form-label">封面</label>
 			    <div class="layui-input-block">
 			      <input type="text" name="cover" id="coverImg" lay-verify="required" autocomplete="off" placeholder="书籍封面" class="layui-input">
 			    </div>
-			  </div>
+			  </div>--%>
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">名称</label>
+			    <label class="layui-form-label">主题</label>
 			    <div class="layui-input-block">
-			      <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入书籍名称" class="layui-input">
+			      <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入消息主题" class="layui-input">
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">作者</label>
+			    <label class="layui-form-label">日期</label>
 			    <div class="layui-input-block">
-			      <input type="text" name="author" lay-verify="required" autocomplete="off" placeholder="请输入作者" class="layui-input">
+			      <input type="text" name="author" lay-verify="required" autocomplete="off" placeholder="请输入日期" class="layui-input">
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">出版社</label>
+			    <label class="layui-form-label">地点</label>
 			    <div class="layui-input-block">
-			      <input type="text" name="publish" lay-verify="required" autocomplete="off" placeholder="请输入出版社" class="layui-input">
+			      <input type="text" name="publish" lay-verify="required" autocomplete="off" placeholder="请输入地点" class="layui-input">
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">索书号</label>
+			    <label class="layui-form-label">联系方式</label>
 			    <div class="layui-input-block">
-			      <input type="text" name="findnumber" lay-verify="required" autocomplete="off" placeholder="请输入索书号" class="layui-input">
+			      <input type="text" name="findnumber" lay-verify="required" autocomplete="off" placeholder="请输入联系方式" class="layui-input">
 			    </div>
 			  </div>
 			  
 			  <div class="layui-form-item">
-			    <label class="layui-form-label">简介</label>
+			    <label class="layui-form-label">消息内容</label>
 			    <div class="layui-input-block">
-			      <textarea name="remarks" placeholder="对书籍做一下简单介绍吧！" class="layui-textarea" style="height:200px"></textarea>
+			      <textarea name="remarks" placeholder="请写下你想发出的消息！" class="layui-textarea" style="height:200px"></textarea>
 			    </div>
 			  </div>
 			  
@@ -307,15 +306,15 @@
             limit:40,
             cols: [//表头
                 [ 
-                	{ field: 'number', title: '排名',width:60,fixed:'left',type:'numbers'},
+                	{ field: 'number', title: '热度',width:60,fixed:'left',type:'numbers'},
                     { field: 'id', title: '资料id', sort: true, hide:true },
                     { field: 'cover', title: '书籍封面',hide:true },
-                    { field: 'name', title: '题名', sort: true,width:200}, 
-                    { field: 'author', title: '作者' }, 
-                    { field: 'publish', title: '出版信息', sort: true }, 
-                    { field: 'findnumber', title: '索书号',width:128 },
-                    { field: 'lentime', title: '推荐次数',width:128, sort: true},
-                    { field: 'remarks', title: '简介',hide:true },
+                    { field: 'name', title: '主题', sort: true,width:200},
+                    { field: 'author', title: '日期' },
+                    { field: 'publish', title: '地点', sort: true },
+                    { field: 'findnumber', title: '联系方式',width:128 },
+                    { field: 'lentime', title: '点击次数',width:128, sort: true},
+                    { field: 'remarks', title: '内容',hide:true },
                     { fixed: 'right',title: '其他操作', width: 128, align: 'center', toolbar: '#barDemo' }
                 ]
             ],
@@ -334,7 +333,7 @@
             	case 'add'://添加
             		layer.open({
                         type: 1,
-                        title: "推荐书籍",
+                        title: "推送消息",
                         area: ['720px', '720px'],
                         content: $('#popUpdate')
                     });
@@ -365,7 +364,7 @@
             	$("#img_id").attr("src",data.cover);
                 layer.open({
                     type: 1,
-                    title: "资料详情",
+                    title: "消息详情",
                     area: ['720px', '720px'],
                     content: $('#popUpdateTest')
                 });

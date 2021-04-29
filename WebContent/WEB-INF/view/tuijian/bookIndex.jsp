@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>书籍管理</title>
+    <title>聊天内容管理</title>
 <script type="text/javascript">
 	$(function(){
 		$.ajax({
@@ -20,8 +20,8 @@
 					str += "<div style='width:20%;height:138px;'>";
 					str += "<img src='"+book.cover+"' style='width:100%;height:100%'>";
 					str += "</div><div style='text-align:left;width:30%;height:138px;float:left;margin-left:21%;margin-top:-138px'>";
-					str += "书名：《"+book.name+"》<br/><br/><br/>作者："+book.author+"<br/><br/><br/>出版社："+book.publish;
-					str += "</div><div style='text-align:left;width:30%;height:138px;float:left;margin-left:52%;margin-top:-138px'>简介：" + book.remarks;
+					str += "主题：《"+book.name+"》<br/><br/><br/>日期："+book.author+"<br/><br/><br/>地点："+book.publish;
+					str += "</div><div style='text-align:left;width:30%;height:138px;float:left;margin-left:52%;margin-top:-138px'>消息内容：" + book.remarks;
 					str += "</div></div><br/>";
 					str += "<div style='width:100%;height:2px;background:blue'></div><br/>";
 				}
